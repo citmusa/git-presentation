@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Git</title>
+    <meta name="description" content="Basic introduction to Git" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/hint.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<!--
+
+        So to summarize of all the possible attributes used to position presentation steps, we have:
+
+        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+            the canvas in pixels; their default value is 0;
+        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+            are exactly the same;
+        * `data-scale` - defines the scale of step element; default value is 1
+
+        These values are used by impress.js in CSS transformation functions, so for more information consult
+        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+
+    -->
+<body class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+    <div id="impress">
+        <div id="overview" class="step" data-y="1000" data-z="1000" data-scale="10">
+            GIT. Sistema de control de versiones
+        </div>
+        <div id="uno" class="step" data-x="-500" data-y="500">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam reprehenderit nisi tempora, ea, accusantium facere corporis veritatis quod molestiae. Dolorum architecto natus, sunt! Excepturi error possimus quo blanditiis, cupiditate ab.</p>
+        </div>
+        <div id="dos" class="step" data-x="-700" data-y="1000" data-rotate="90">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus consequuntur natus debitis expedita quas vitae, architecto laboriosam velit. Atque, eveniet ullam. Recusandae fuga omnis perferendis, ut eum explicabo neque aliquam?</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/impress.js"></script>
+    <script type="text/javascript" src="js/touch.js"></script>
+    <script>impress().init();</script>
+    <!--
+
+    The `impress()` function also gives you access to the API that controls the presentation.
+
+    Just store the result of the call:
+
+        var api = impress();
+
+    and you will get three functions you can call:
+
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.stepTo( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+
+-->
+</body>
+</html>
